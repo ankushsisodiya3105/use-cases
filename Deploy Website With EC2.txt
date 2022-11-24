@@ -1,0 +1,20 @@
+Deploy a website with EC2 instance.
+Steps:-
+1.	Sign in AWS management console
+2.	Type EC2 on search bar and click on EC2
+3.	Click on Instances and then click on Launch Instances
+4.	Give the name in Name & Tag field----xyz
+5.	Select the AMI in Application and OS Images---Amazon Linux and free tier  Volume Type
+6.	Select Instance type---t2.micro(free tier)
+7.	Then in key pair, click on create new key pair—enter Key pair name and select RSA, and .pem, click on create key pair
+8.	Then in Network Setting select Allow SSH, HTTPS & HTTP
+9.	And click on Launch Instance
+10.	Select EC2 instance you will get the details as below in the screen
+11.	Copy the Public IPV4 address
+12.	Click on connect button on top and again connect OR connect with ssh on console as per your choice.
+13.	Then type sudo –i to get root access
+14.	Then install Apache HTTPD service by typing  yum install httpd – y
+15.	Then go to /var/www/html directory by typing cd /var/www/html
+16.	Make a file in html directory by typing vim index.html  and write the test content and save it by :wq!
+17.	Then start & enable the HTTPD service by typing the command systemctl enable –now httpd
+18.	Then lastly, paste the Public IPV4 address on browser, you will get the test page content
